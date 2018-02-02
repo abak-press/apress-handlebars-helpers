@@ -7,8 +7,6 @@ const
 const 
   helper = require('./helper.js');
 
-let tempWindow;
-
 describe('i18n helper', () => {
 
   beforeEach(helper.backupWindow);

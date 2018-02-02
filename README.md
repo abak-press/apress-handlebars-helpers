@@ -42,7 +42,7 @@ apress-handlebars-helpers
      {
        test: /\.handlebars$/,
        loader: 'handlebars-loader',
-       query: { helperDirs: [ path.dirname(require.resolve('@apress/helpers/helpers')) ] }
+       query: { helperDirs: [ path.dirname(require.resolve('@apress/handlebars-helpers')) + '/helpers' ] }
      },
      // ...
    };
