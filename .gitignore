@@ -1,0 +1,9 @@
+# ignore npm
+node_modules
+npm-debug.log
+
+# ignore vim swap files
+*.swp
+
+# ignore code coverage temprary dir
+.nyc_output/
