@@ -8,7 +8,7 @@
  */
 const i18n = function(key) {
   const 
-    errorMessage = `translation missing app.i18n['${key}']`;
+    errorMessage = 'translation missing app.i18n["' + key + '"]';
 
   return (window.app.i18n && window.app.i18n[key]) || errorMessage;
 };
