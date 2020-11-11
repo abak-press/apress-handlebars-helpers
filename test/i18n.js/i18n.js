@@ -95,4 +95,14 @@ describe('i18n helper', () => {
       i18n(helper.TEST_LOCALE_NESTED_KEY, options)
     );
   });
+
+  it(`should return window.app.i18n[key] value if locale was written in dot notation`, () => {
+    helper.mockWindow({
+      app: {
+        i18n: { [helper.TEST_LOCALE_DOT_NOTATION_VALUE]: helper.TEST_LOCALE_VALUE }
+      }
+    });
+
+    assert.strictEqual(helper.TEST_LOCALE_VALUE, i18n(helper.TEST_LOCALE_DOT_NOTATION_VALUE));
+  });
 });
