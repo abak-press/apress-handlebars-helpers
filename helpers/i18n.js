@@ -13,10 +13,13 @@ const i18n = function(key, options) {
     interpolateRegExp = /%{(\w+)}/g;
 
   try {
-    let
+    let translation = window.app.i18n && window.app.i18n[key];
+
+    if (!translation) {
       translation = key.split('.').reduce(function(translation, key) {
         return translation[key];
       }, window.app.i18n);
+    }
 
     return translation.replace(interpolateRegExp, function(match, key) {
       return options.hash[key];
